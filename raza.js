@@ -12,30 +12,29 @@ myForm.addEventListener("submit", (event) => {
 
   let totalMrk = Number(totalInput.value);
   let obtaindMrk = Number(obtainedInput.value);
-  let percantage = Number(percentageInput.value);
-  let grade = Number(gradeInput.value);
 
   let sum = (obtaindMrk / totalMrk) * 100;
   console.log(sum);
 
   let num = sum;
 
+  let grade;
   if (sum >= 80) {
-    console.log("A-One");
+    grade = "A-One";
   } else if (num >= 70) {
-    console.log("A-Grade");
+    grade = "A-Grade";
   } else if (num >= 60) {
-    console.log("B-Grade");
+    grade = "B-Grade";
   } else if (num >= 50) {
-    console.log("C-Grade");
+    grade = "C-Grade";
   } else if (num >= 40) {
-    console.log("D-Grade");
+    grade = "D-Grade";
   } else {
-    console.log("Fail");
+    grade = "Fail";
   }
 
   percentageInput.innerText = sum;
-  gradeInput.innerText = sum;
+  gradeInput.innerText = grade;
 
   //event.target.reset(sum)
   console.log("submiting done");
